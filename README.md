@@ -14,3 +14,7 @@ E.g.
 ```
 pip install flask 
 ```
+
+# Commit reference guide
+* GHC = Github Codespaces
+* Venv = `root/microblog` (in root, or main/parent directory) - virtual environment with the above libraries installed

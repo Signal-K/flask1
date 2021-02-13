@@ -33,3 +33,13 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route('user/<username>') # url slug is domain.tld/user/your-username | dynamic components like username are put inside <>
+@login_required # won't be visible or accessible to anonymous/logged-out users as they don't have a profile page. Uses 'login_required` decorator
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404() # load the user from the database, 
+    posts = [
+        {'author': user, 'body': 'Test post #1'}, # takes the actual username and then uses strings to display demo body text for now
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html', user=user, posts=posts) # Sets values and renders the user template

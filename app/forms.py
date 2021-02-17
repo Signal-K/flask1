@@ -24,3 +24,7 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError('Please use a different username')
+
+# Integrating Followers with the Application - Part 8
+class EmptyForm(FlaskForm):
+    submit = SubmitField('Submit')

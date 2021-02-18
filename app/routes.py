@@ -6,7 +6,7 @@ from flask_login import logout_user
 from app.models import User
 from datetime import datetime
 from app.forms import EditProfileForm
-from app.forms import EmptyForm
+from app.forms import EmptyForm # note that since the tutorial is open-source we can always just copy the code from that if we ever have any really big questions. Base/core understanding is still there
 
 @app.before_request
 def before_request():

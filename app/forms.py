@@ -28,3 +28,9 @@ class EditProfileForm(FlaskForm):
 # Integrating Followers with the Application - Part 8
 class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
+
+# allow users to make their own posts
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[
+        DataRequired(), Length(min=1, max=140]) # The form must be completed with content and the length has to be within 1-140 characters
+    submit = SubmitField('Submit') # button labelled submit that links to db.commit()

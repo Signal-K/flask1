@@ -27,9 +27,16 @@ def index():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('index'))
-    posts = current_user.followed_posts().all()
-    return render_template("index.html", title='Home Page', form=form,
-                           posts=posts)
+    page = request.args.get('page', 1, type=int)
+    posts = current_user.followed_posts().paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    next_url = url_for('index', page=posts.next_num) \
+        if posts.has_next else None
+    prev_url = url_for('index', page=posts.prev_num) \
+        if posts.has_prev else None
+    return render_template('index.html', title='Home', form=form,
+                           posts=posts.items, next_url=next_url,
+                           prev_url=prev_url)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -53,15 +60,20 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-@app.route('/user/<username>') # url slug is domain.tld/user/your-username | dynamic components like username are put inside <>
-@login_required # won't be visible or accessible to anonymous/logged-out users as they don't have a profile page. Uses 'login_required` decorator
+@app.route('/user/<username>')
+@login_required
 def user(username):
-    user = User.query.filter_by(username=username).first_or_404() # load the user from the database, 
-    posts = [
-        {'author': user, 'body': 'Test post #1'}, # takes the actual username and then uses strings to display demo body text for now
-        {'author': user, 'body': 'Test post #2'}
-    ]
-    return render_template('user.html', user=user, posts=posts) # Sets values and renders the user template
+    user = User.query.filter_by(username=username).first_or_404()
+    page = request.args.get('page', 1, type=int)
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    next_url = url_for('user', username=user.username, page=posts.next_num) \
+        if posts.has_next else None
+    prev_url = url_for('user', username=user.username, page=posts.prev_num) \
+        if posts.has_prev else None
+    form = EmptyForm()
+    return render_template('user.html', user=user, posts=posts.items,
+                           next_url=next_url, prev_url=prev_url, form=form)
 
 @app.route('/edit_profile')
 @login_required
@@ -124,5 +136,12 @@ def unfollow(username):
 @app.route('/explore')
 @login_required
 def explore():
-    posts = Post.query.order_by(Post.timestamp.desc()).all() # show all posts, and render this post variable inside the explore page, or class
-    return render_template('index.html', title='Explore', posts=posts) # reuses the index.html template but does not have a form to write posts, and shows all posts rather than just followed posts
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    next_url = url_for('explore', page=posts.next_num) \
+        if posts.has_next else None
+    prev_url = url_for('explore', page=posts.prev_num) \
+        if posts.has_prev else None
+    return render_template("index.html", title='Explore', posts=posts.items,
+                          next_url=next_url, prev_url=prev_url)

@@ -7,6 +7,8 @@ from app.models import User
 from datetime import datetime
 from app.forms import EditProfileForm
 from app.forms import EmptyForm # note that since the tutorial is open-source we can always just copy the code from that if we ever have any really big questions. Base/core understanding is still there
+from app.forms import PostForm
+from app.models import Post
 
 @app.before_request
 def before_request():
@@ -14,11 +16,20 @@ def before_request():
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user) # create a post variable if the form has been submitted, and then add it to the db:
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('index'))
+    posts = current_user.followed_posts().all()
+    return render_template("index.html", title='Home Page', form=form,
+                           posts=posts)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -108,3 +119,10 @@ def unfollow(username):
         return redirect(url_for('user', username=username))
     else:
         return redirect(url_for('index'))
+    
+# Explore page, shows a global post stream from all users to make it easier to find other accounts
+@app.route('/explore')
+@login_required
+def explore():
+    posts = Post.query.order_by(Post.timestamp.desc()).all() # show all posts, and render this post variable inside the explore page, or class
+    return render_template('index.html', title='Explore', posts=posts) # reuses the index.html template but does not have a form to write posts, and shows all posts rather than just followed posts

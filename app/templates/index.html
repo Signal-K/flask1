@@ -6,3 +6,45 @@
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
 {% endblock %}
+
+<!--
+    <doctype html="">
+    <title>Flask Music Database</title>
+<h2>Flask Music Database</h2>
+{% from "_formhelpers.html" import render_field %}
+<form method="post">
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </p></dl>
+  <p><input type="submit" value="Search">
+</p></form>
+</doctype>
+
+<doctype html="">
+    <title>Flask Music Database</title>
+<h2>Flask Music Database</h2>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% from "_formhelpers.html" import render_field %}
+<form method="post">
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </p></dl>
+  <p><input type="submit" value="Search">
+</p></form>
+</doctype>
+
+http://www.blog.pythonlibrary.org/wp-content/uploads/2017/12/flask_musicdv_part_iii.tar.gz
+https://www.blog.pythonlibrary.org/2017/12/13/flask-101-how-to-add-a-search-form/
+-->

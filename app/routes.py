@@ -2,14 +2,18 @@ from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
-from app.forms import LoginForm, RegistrationForm
+from app.forms import LoginForm, RegistrationForm, SearchForm1
 from app.models import User
 
+#init_db() -> Not sure if this is relevant to mgrinberg microblog
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
+    search = SearchForm1(request.form) 
+    if request.method == 'Post':
+        return search_results(search) # load the search form
     posts = [
         {
             'author': {'username': 'John'},
@@ -20,7 +24,7 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', title='Home', posts=posts)
+    return render_template('index.html', title='Home', posts=posts, form=search)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -60,3 +64,18 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.route('/searchresults')
+def search_results(search):
+    results = []
+    search_string = search.data['search']
+
+    if search.data['search'] == '':
+        qry = db_session.query(Album)
+        results = qry.all()
+    if not results:
+        flash('No results found!')
+        return redirect('/')
+    else:
+        # display results
+        return render_template('results.html', results=results)

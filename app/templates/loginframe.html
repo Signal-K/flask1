@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  
+  <title>SK | eLearning</title>
+</head>
+<body>
+
+<form class="e-login" name="form1" action="form1" method="post">
+  <div class="auto-flex">
+    <h1 class="sk valign-text-middle audiowide-normal-black-72px">SK</h1>
+    <div class="login-form">
+      <div class="login">
+        <div class="login-1 notosansjp-normal-black-48px">Login.</div>
+        <div class="email-field">
+          <div class="text-1 notosansjp-normal-mountain-mist-22px">Your e-mail or user name</div>
+          <input class="rectangle-3" name="9203" placeholder="" type="text" required />
+        </div>
+        <div class="password-field">
+          <div class="password notosansjp-normal-mountain-mist-22px">Password</div>
+          <input class="rectangle-4" name="9204" placeholder="" type="password" required />
+        </div>
+        <div class="loggedin">
+          <div class="rectangle-2"></div>
+          <div class="keep-me-logged-in notosansjp-normal-mountain-mist-16px">Keep me logged in</div>
+        </div>
+        <a href="javascript:SubmitForm('form1')">
+          <div class="btn-login">
+            <div class="overlap-group">
+              <div class="login-2 valign-text-middle notosansjp-medium-white-18px">Login</div>
+            </div>
+          </div></a
+        >
+      </div>
+      <p class="text-2 notosansjp-normal-white-16px">
+        <span class="span0">Don’t have an account? </span><span class="span1">Sign up<br />Forgot password?</span>
+      </p>
+    </div>
+  </div>
+  <div class="hero-login bp1-animate-enter">
+    <img
+      class="planet-svg"
+      src="https://anima-uploads.s3.amazonaws.com/projects/603378ce329c7b99b7b85ee0/releases/60360656a226c826850abbc8/img/planet-svg@2x.svg"
+    />
+  </div>
+</form>
+
+</body>
+</html>

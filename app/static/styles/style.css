@@ -1,0 +1,267 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Audiowide:400|Noto+Sans+JP:400,500");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.audiowide-normal-black-72px {
+  color: black;
+  font-family: "Audiowide", Helvetica, Arial, serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+}
+.bp1-animate-enter {
+  animation: bp1-animate-enter-frames 0.5s ease-in-out 0s 1 normal forwards;
+  display: block;
+  height: auto;
+  width: 50vw;
+  opacity: 0;
+  transform: translate(55px, 0);
+}
+.e-login {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  width: auto;
+}
+.e-login .auto-flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: -17px;
+  margin-top: 20px;
+  min-height: 848px;
+  width: 50vw;
+  height: 100vh;
+}
+.e-login .btn-login {
+  align-items: center;
+  display: flex;
+  margin-top: 37px;
+  min-width: 452px;
+}
+.e-login .email-field {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 77px;
+  min-height: 104px;
+  width: 452px;
+}
+.e-login .hero-login {
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/603378ce329c7b99b7b85ee0/releases/6036034d808110207c6f997d/img/bg-login@1x.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  margin-left: 181px;
+  margin-top: 20px;
+  float: right;
+  width: 40vw;
+  opacity: 0;
+  transform: translate(25px, 0);
+}
+
+.e-login .keep-me-logged-in {
+  letter-spacing: 0px;
+  margin-left: 16px;
+  min-height: 20px;
+  width: 147px;
+}
+.e-login .loggedin {
+  align-items: flex-start;
+  display: flex;
+  height: 21px;
+  margin-left: 8px;
+  margin-top: 29px;
+  min-width: 183px;
+}
+.e-login .login {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  min-height: 501px;
+  width: 452px;
+}
+.e-login .login-1 {
+  letter-spacing: 0px;
+  margin-left: 8px;
+  min-height: 54px;
+  opacity: 0.4;
+  width: 167px;
+}
+.e-login .login-2 {
+  height: 39px;
+  letter-spacing: 0px;
+  min-height: 39px;
+  text-align: center;
+  width: 300px;
+}
+.e-login .login-form {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 107px;
+  min-height: 618px;
+  width: 452px;
+}
+.e-login .overlap-group {
+  align-items: flex-start;
+  background-color: var(--picton-blue);
+  border-radius: 10px;
+  display: flex;
+  height: 52px;
+  justify-content: flex-end;
+  min-width: 450px;
+  padding: 6px 74.1px;
+}
+.e-login .password {
+  letter-spacing: 0px;
+  margin-left: 10px;
+  min-height: 36px;
+  width: 104px;
+}
+.e-login .password-field {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 21px;
+  min-height: 106px;
+  width: 452px;
+}
+.e-login .planet-svg {
+  height: 347px;
+  left: 87px;
+  position: absolute;
+  top: 25%;
+  width: 35vw;
+}
+.e-login .rectangle-2 {
+  align-self: flex-end;
+  background-color: var(--hit-pink);
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+}
+.e-login .rectangle-3 {
+  background-color: var(--hit-pink);
+  border: 0;
+  border-radius: 10px;
+  flex-shrink: 1;
+  height: 50px;
+  margin-top: 20px;
+  opacity: 0.2;
+  padding: 0;
+  resize: none;
+  width: 450px;
+}
+.e-login .rectangle-4 {
+  background-color: var(--hit-pink);
+  border: 0;
+  border-radius: 5px;
+  flex-shrink: 1;
+  height: 50px;
+  margin-top: 20px;
+  opacity: 0.3;
+  padding: 0;
+  resize: none;
+  width: 450px;
+}
+.e-login .sk {
+  height: 123px;
+  letter-spacing: 0px;
+  min-height: 123px;
+  opacity: 0.4;
+  text-align: center;
+  width: 248px;
+}
+.e-login .span0 {
+  color: rgba(153, 153, 153, 1);
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.e-login .span1 {
+  color: rgba(255, 176, 134, 1);
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.e-login .text-1 {
+  letter-spacing: 0px;
+  margin-left: 10px;
+  min-height: 34px;
+  width: 270px;
+}
+.e-login .text-2 {
+  letter-spacing: 0px;
+  margin-right: 2px;
+  margin-top: 41px;
+  min-height: 76px;
+  width: 414px;
+}
+.notosansjp-medium-white-18px {
+  color: white;
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.notosansjp-normal-black-48px {
+  color: black;
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+}
+.notosansjp-normal-mountain-mist-16px {
+  color: var(--mountain-mist);
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.notosansjp-normal-mountain-mist-22px {
+  color: var(--mountain-mist);
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+.notosansjp-normal-white-16px {
+  color: transparent;
+  font-family: "Noto Sans JP", Helvetica, Arial, serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 2;
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --hit-pink: rgba(255, 176, 134, 0.3);
+  --mountain-mist: rgba(153, 153, 153, 1);
+  --picton-blue: rgba(78, 175, 245, 0.75);
+}
+@keyframes bp1-animate-enter-frames {
+  from {
+    opacity: 0;
+    transform: translate(25px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  display: contents;
+}

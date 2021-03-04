@@ -26,6 +26,13 @@ def index():
     ]
     return render_template('index.html', title='Home', posts=posts, form=search)
 
+@app.route('/game-1') # Embedding games in Flask for Arcadia - github.com/acord-robotics/stellarios or /datascience.... DSP-10
+@login_required
+def game-1():
+    pass
+"""
+Flask, dash, db/flask-migrate integration and execution of scripts, from datasets. Write about integration with game. Search form on Flask. Embed on flask site on @login-required pages. https://www.notion.so/skinetics/Dash-Flask-for-Jira-DSP-UPK-9fbbcf81018a4ed08e611401fbb03977. See this repo for more info """
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

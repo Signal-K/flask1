@@ -1,0 +1,17 @@
+HTTrack3.49-2 launched on Thu, 15 Apr 2021 05:43:36 at https://demo.hasthemes.com/airi-preview/airi/index-04.html
+(httrack https://demo.hasthemes.com/airi-preview/airi/index-04.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+05:52:48	Error: 	"Forbidden" (403) at link https://demo.hasthemes.com/airi-preview/airi/assets/fonts/dl-icon??v=1.1. (from https://demo.hasthemes.com/airi-preview/airi/assets/css/dl-icon.css)
+05:52:48	Warning: 	Retry after error 502 (Bad Gateway) at link https://demo.hasthemes.com/airi-preview/airi/assets/img/icons/ui-icons_228ef1_256x240.png (from https://demo.hasthemes.com/airi-preview/airi/assets/css/plugins.css)
+05:52:48	Error: 	"Forbidden" (403) at link https://demo.hasthemes.com/airi-preview/airi/assets/img/icons/ui-icons_454545_256x240.png (from https://demo.hasthemes.com/airi-preview/airi/assets/css/plugins.css)
+05:52:48	Warning: 	Retry after error 502 (Bad Gateway) at link https://demo.hasthemes.com/airi-preview/airi/assets/fonts/lg.woff?n1z373 (from https://demo.hasthemes.com/airi-preview/airi/assets/css/plugins.css)
+05:52:48	Error: 	"Forbidden" (403) at link https://demo.hasthemes.com/airi-preview/airi/assets/img/others/line2.png (from https://demo.hasthemes.com/airi-preview/airi/assets/css/main.css)
+05:52:48	Warning: 	Retry after error 502 (Bad Gateway) at link https://demo.hasthemes.com/airi-preview/airi/assets/img/products/prod-19-1.jpg (from https://demo.hasthemes.com/airi-preview/airi/index.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 9 minutes 13 seconds : 555 links scanned, 548 files written (42254119 bytes overall) [27549384 bytes received at 49818 bytes/sec], 16324641 bytes transferred using HTTP compression in 88 files, ratio 8%, 111.0 requests per connection
+(3 errors, 3 warnings, 0 messages)

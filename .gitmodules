@@ -1,0 +1,3 @@
+[submodule "datascience"]
+	path = datascience
+	url = https://github.com/acord-robotics/datascience

@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+    bot_app:
+        image: bot
+        depends_on:
+            - bot_redis
+        build:
+            context: .
+            target: production
+        networks:
+            - mynetwork
+        ports:
+            - '4000:4000'
+    bot_redis:
+        image: redis
+        container_name: bot_redis
+        ports:
+            - '6378:6379'
+        volumes:
+            - redis_bot:/data
+        user: redis
+        networks:
+            - mynetwork
+
+volumes:
+    redis_bot:
+
+networks:
+    mynetwork:
+        external: false

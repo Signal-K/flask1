@@ -1,0 +1,12 @@
+logs
+*.log
+
+test
+
+coverage
+
+.nyc_output
+
+backup
+
+node_modules

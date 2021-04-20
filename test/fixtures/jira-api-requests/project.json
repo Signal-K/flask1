@@ -1,0 +1,111 @@
+{
+  "self": "http://jira.test-example.ru/jira/rest/api/2/project/DTP",
+  "id": "10305",
+  "key": "DTP",
+  "description": "This project was created as an example for REST.",
+  "lead": {
+    "self": "http://jira.test-example.ru/jira/rest/api/2/user?username=fred",
+    "accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+    "avatarUrls": {
+      "48x48": "http://jira.test-example.ru/jira/secure/useravatar?size=large&ownerId=fred",
+      "24x24": "http://jira.test-example.ru/jira/secure/useravatar?size=small&ownerId=fred",
+      "16x16": "http://jira.test-example.ru/jira/secure/useravatar?size=xsmall&ownerId=fred",
+      "32x32": "http://jira.test-example.ru/jira/secure/useravatar?size=medium&ownerId=fred"
+    },
+    "displayName": "Fred F. User",
+    "active": false
+  },
+  "components": [
+    {
+      "self": "http://jira.test-example.ru/jira/rest/api/2/component/10305",
+      "id": "10305",
+      "name": "Component 1",
+      "description": "This is a Jira component",
+      "lead": {
+        "self": "http://jira.test-example.ru/jira/rest/api/2/user?username=fred",
+        "accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+        "avatarUrls": {
+          "48x48": "http://jira.test-example.ru/jira/secure/useravatar?size=large&ownerId=fred",
+          "24x24": "http://jira.test-example.ru/jira/secure/useravatar?size=small&ownerId=fred",
+          "16x16": "http://jira.test-example.ru/jira/secure/useravatar?size=xsmall&ownerId=fred",
+          "32x32": "http://jira.test-example.ru/jira/secure/useravatar?size=medium&ownerId=fred"
+        },
+        "displayName": "Fred F. User",
+        "active": false
+      },
+      "assigneeType": "PROJECT_LEAD",
+      "assignee": {
+        "self": "https://jira.test-example.ru/rest/api/2/user?accountId=5b912f5c8a96e82b9549361c",
+        "accountId": "5b912f5c8a96e82b9549361c",
+        "avatarUrls": {
+          "48x48": "https://avatar-cdn.atlassian.com/fea50ba67a952c46cd128d3dea7c7b5a?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffea50ba67a952c46cd128d3dea7c7b5a%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+          "24x24": "https://avatar-cdn.atlassian.com/fea50ba67a952c46cd128d3dea7c7b5a?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffea50ba67a952c46cd128d3dea7c7b5a%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+          "16x16": "https://avatar-cdn.atlassian.com/fea50ba67a952c46cd128d3dea7c7b5a?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffea50ba67a952c46cd128d3dea7c7b5a%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+          "32x32": "https://avatar-cdn.atlassian.com/fea50ba67a952c46cd128d3dea7c7b5a?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffea50ba67a952c46cd128d3dea7c7b5a%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+        },
+        "displayName": "Иванов Иван Иванович",
+        "active": true,
+        "timeZone": "Europe/Moscow"
+      },
+      "realAssigneeType": "PROJECT_LEAD",
+      "realAssignee": {
+        "self": "http://jira.test-example.ru/jira/rest/api/2/user?username=fred",
+        "accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+        "avatarUrls": {
+          "48x48": "http://jira.test-example.ru/jira/secure/useravatar?size=large&ownerId=fred",
+          "24x24": "http://jira.test-example.ru/jira/secure/useravatar?size=small&ownerId=fred",
+          "16x16": "http://jira.test-example.ru/jira/secure/useravatar?size=xsmall&ownerId=fred",
+          "32x32": "http://jira.test-example.ru/jira/secure/useravatar?size=medium&ownerId=fred"
+        },
+        "displayName": "Fred F. User",
+        "active": false
+      },
+      "isAssigneeTypeValid": false,
+      "project": "HSP",
+      "projectId": 10305
+    }
+  ],
+  "issueTypes": [
+    {
+      "self": "http://localhost:8090/jira/rest/api/2.0/issueType/3",
+      "id": "3",
+      "description": "A task that needs to be done.",
+      "iconUrl": "http://localhost:8090/jira/images/icons/issuetypes/task.png",
+      "name": "Task",
+      "subtask": false,
+      "avatarId": 1
+    },
+    {
+      "self": "http://localhost:8090/jira/rest/api/2.0/issueType/1",
+      "id": "1",
+      "description": "A problem with the software.",
+      "iconUrl": "http://localhost:8090/jira/images/icons/issuetypes/bug.png",
+      "name": "Bug",
+      "subtask": false,
+      "avatarId": 10002
+    }
+  ],
+  "url": "http://jira.test-example.ru/jira/browse/DTP",
+  "email": "from-jira@example.com",
+  "assigneeType": "PROJECT_LEAD",
+  "versions": [],
+  "name": "Example",
+  "roles": {
+    "Developers": "http://jira.test-example.ru/jira/rest/api/2/project/DTP/role/10305"
+  },
+  "avatarUrls": {
+    "48x48": "http://jira.test-example.ru/jira/secure/projectavatar?size=large&pid=10305",
+    "24x24": "http://jira.test-example.ru/jira/secure/projectavatar?size=small&pid=10305",
+    "16x16": "http://jira.test-example.ru/jira/secure/projectavatar?size=xsmall&pid=10305",
+    "32x32": "http://jira.test-example.ru/jira/secure/projectavatar?size=medium&pid=10305"
+  },
+  "projectCategory": {
+    "self": "http://jira.test-example.ru/jira/rest/api/2/projectCategory/10305",
+    "id": "10305",
+    "name": "FIRST",
+    "description": "First Project Category"
+  },
+  "simplified": false,
+  "style": "new-gen",
+  "isPrivate": false
+}

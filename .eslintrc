@@ -1,0 +1,51 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:mocha/recommended"
+    ],
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "plugins": ["prettier", "mocha"],
+    "rules": {
+        "mocha/no-mocha-arrows": "off",
+        "mocha/no-setup-in-describe": "off",
+        "mocha/max-top-level-suites": "off",
+        "mocha/no-hooks-for-single-case": "off",
+        "mocha/no-skipped-tests": "off",
+        "@typescript-eslint/no-useless-constructor": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "class-methods-use-this": "off",
+        "consistent-return": "off",
+        "prettier/prettier": "error",
+        "max-len": ["error", { "code": 120, "comments": 180, "ignoreTemplateLiterals": true }],
+        "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "no-await-in-loop": "off",
+        "no-console": "error",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/camelcase": "off"
+    },
+    "overrides": [
+        {
+            "files": ["./src/migration/**/*.ts"],
+            "rules": {
+                "@typescript-eslint/class-name-casing": "off",
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/no-explicit-any": "off",
+                "max-len": "off"
+            }
+        },
+        {
+            "files": ["./test/**/*.ts", "./src/common/errors/**/*.ts", "*.dto.ts"],
+            "rules": {
+                "@typescript-eslint/no-non-null-assertion": "off",
+                "max-len": "off"
+            }
+        }
+    ]
+}

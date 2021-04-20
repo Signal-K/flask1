@@ -1,0 +1,369 @@
+{
+    "timestamp": 1511973439683,
+    "webhookEvent": "jira:issue_updated",
+    "issue_event_type_name": "issue_commented",
+    "user": {
+        "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+        },
+        "displayName": "correct_user",
+        "active": true,
+        "timeZone": "Europe/Moscow"
+    },
+    "issue": {
+        "id": "26313",
+        "self": "https://jira.test-example.ru/jira/rest/api/2/issue/26313",
+        "key": "BBCOM-956",
+        "fields": {
+            "issuetype": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/issuetype/3",
+                "id": "3",
+                "description": "A task that needs to be done.",
+                "iconUrl": "https://jira.test-example.ru/jira/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+                "name": "Task",
+                "subtask": false,
+                "avatarId": 10318
+            },
+            "components": [],
+            "description": "dafdasfadf",
+            "project": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/project/10305",
+                "id": "10305",
+                "key": "BBCOM",
+                "name": "BB Common",
+                "avatarUrls": {
+                    "48x48": "https://jira.test-example.ru/jira/secure/projectavatar?pid=10305&avatarId=10011",
+                    "24x24": "https://jira.test-example.ru/jira/secure/projectavatar?size=small&pid=10305&avatarId=10011",
+                    "16x16": "https://jira.test-example.ru/jira/secure/projectavatar?size=xsmall&pid=10305&avatarId=10011",
+                    "32x32": "https://jira.test-example.ru/jira/secure/projectavatar?size=medium&pid=10305&avatarId=10011"
+                }
+            },
+            "customfield_10110": null,
+            "customfield_10111": null,
+            "resolution": null,
+            "customfield_10302": null,
+            "customfield_10401": null,
+            "customfield_10006": "BBCOM-801",
+            "customfield_10600": null,
+            "customfield_10602": [
+                {
+                    "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                    },
+                    "displayName": "correct_user",
+                    "active": true,
+                    "timeZone": "Europe/Moscow"
+                },
+                {
+                    "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=jira_test_bot",
+                    "key": "jira_test_bot",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/4a0835e8f5561160faaf4c44c26d97c7?d=mm&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/4a0835e8f5561160faaf4c44c26d97c7?d=mm&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/4a0835e8f5561160faaf4c44c26d97c7?d=mm&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/4a0835e8f5561160faaf4c44c26d97c7?d=mm&s=32"
+                    },
+                    "displayName": "jira_test_bot",
+                    "active": true,
+                    "timeZone": "Europe/Moscow"
+                },
+                {
+                    "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=ii_ivanov",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/f171b6f7572dee3137354db01c9b7e89?d=mm&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/f171b6f7572dee3137354db01c9b7e89?d=mm&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/f171b6f7572dee3137354db01c9b7e89?d=mm&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/f171b6f7572dee3137354db01c9b7e89?d=mm&s=32"
+                    },
+                    "displayName": "Иванов Иван Иванович",
+                    "active": true,
+                    "timeZone": "Europe/Moscow"
+                }
+            ],
+            "customfield_10009": "0|i02alz:",
+            "attachment": [],
+            "customfield_10108": null,
+            "resolutiondate": null,
+            "workratio": -1,
+            "summary": "BBCOM-956",
+            "lastViewed": "2017-11-29T19:34:53.043+0300",
+            "watches": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/issue/BBCOM-956/watchers",
+                "watchCount": 3,
+                "isWatching": true
+            },
+            "creator": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                "avatarUrls": {
+                    "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                    "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                    "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                    "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                },
+                "displayName": "correct_user",
+                "active": true,
+                "timeZone": "Europe/Moscow"
+            },
+            "subtasks": [],
+            "created": "2017-09-08T11:43:48.626+0300",
+            "reporter": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                "avatarUrls": {
+                    "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                    "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                    "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                    "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                },
+                "displayName": "correct_user",
+                "active": true,
+                "timeZone": "Europe/Moscow"
+            },
+            "priority": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/priority/10000",
+                "iconUrl": "https://jira.test-example.ru/jira/images/icons/priorities/blocker.svg",
+                "name": "Blocker",
+                "id": "10000"
+            },
+            "customfield_10103": null,
+            "customfield_10004": null,
+            "customfield_10301": null,
+            "customfield_10400": [],
+            "environment": null,
+            "duedate": null,
+            "comment": {
+                "comments": [
+                    {
+                        "self": "https://jira.test-example.ru/jira/rest/api/2/issue/26313/comment/28966",
+                        "id": "28966",
+                        "author": {
+                            "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                            "name": "correct_user",
+                            "avatarUrls": {
+                                "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                                "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                                "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                                "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                            },
+                            "displayName": "correct_user",
+                            "active": true,
+                            "timeZone": "Europe/Moscow"
+                        },
+                        "body": "еуые",
+                        "updateAuthor": {
+                            "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                            "avatarUrls": {
+                                "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                                "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                                "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                                "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                            },
+                            "displayName": "correct_user",
+                            "active": true,
+                            "timeZone": "Europe/Moscow"
+                        },
+                        "created": "2017-09-25T14:50:35.856+0300",
+                        "updated": "2017-09-25T14:50:35.856+0300"
+                    },
+                    {
+                        "self": "https://jira.test-example.ru/jira/rest/api/2/issue/26313/comment/31023",
+                        "id": "31023",
+                        "author": {
+                            "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                            "avatarUrls": {
+                                "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                                "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                                "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                                "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                            },
+                            "displayName": "correct_user",
+                            "active": true,
+                            "timeZone": "Europe/Moscow"
+                        },
+                        "body": "111",
+                        "updateAuthor": {
+                            "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                            "avatarUrls": {
+                                "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                                "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                                "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                                "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                            },
+                            "displayName": "correct_user",
+                            "active": true,
+                            "timeZone": "Europe/Moscow"
+                        },
+                        "created": "2017-11-29T19:37:19.584+0300",
+                        "updated": "2017-11-29T19:37:19.584+0300"
+                    }
+                ],
+                "maxResults": 88,
+                "total": 88,
+                "startAt": 0
+            },
+            "issuelinks": [],
+            "votes": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/issue/BBCOM-956/votes",
+                "votes": 0,
+                "hasVoted": false
+            },
+            "assignee": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                "avatarUrls": {
+                    "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                    "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                    "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                    "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                },
+                "displayName": "correct_user",
+                "active": true,
+                "timeZone": "Europe/Moscow"
+            },
+            "updated": "2017-11-29T19:34:51.676+0300",
+            "status": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/status/4",
+                "description": "This issue was once resolved, but the resolution was deemed incorrect. From here issues are either marked assigned or resolved.",
+                "iconUrl": "https://jira.test-example.ru/jira/images/icons/statuses/reopened.png",
+                "name": "Reopened",
+                "id": "4",
+                "statusCategory": {
+                    "self": "https://jira.test-example.ru/jira/rest/api/2/statuscategory/2",
+                    "id": 2,
+                    "key": "new",
+                    "colorName": "blue-gray",
+                    "name": "To Do"
+                }
+            }
+        },
+        "changelog": {
+            "startAt": 0,
+            "maxResults": 2,
+            "total": 2,
+            "items": [
+                {
+                    "field": "resolution",
+                    "fieldtype": "jira",
+                    "from": null,
+                    "fromString": null,
+                    "to": "5",
+                    "toString": "Cannot Reproduce"
+                },
+                {
+                    "field": "status",
+                    "fieldtype": "jira",
+                    "from": "1",
+                    "fromString": "Open",
+                    "to": "6",
+                    "toString": "Closed"
+                }
+            ],
+            "histories": [
+                {
+                    "id": "14108198",
+                    "author": {
+                        "self": "https://issues.apache.org/jira/rest/api/2/user?username=erickerickson",
+                        "name": "erickerickson",
+                        "key": "erickerickson",
+                        "avatarUrls": {
+                            "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+                            "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+                            "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+                            "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+                        },
+                        "displayName": "Erick Erickson",
+                        "active": true,
+                        "timeZone": "America/New_York"
+                    },
+                    "created": "2014-06-24T20:37:37.751+0000"
+                },
+                {
+                    "id": "16391189",
+                    "author": {
+                        "self": "https://issues.apache.org/jira/rest/api/2/user?username=gmcdonald",
+                        "name": "gmcdonald",
+                        "key": "ipv6guru",
+                        "avatarUrls": {
+                            "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=ipv6guru&avatarId=10405",
+                            "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=ipv6guru&avatarId=10405",
+                            "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=ipv6guru&avatarId=10405",
+                            "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=ipv6guru&avatarId=10405"
+                        },
+                        "displayName": "Gavin",
+                        "active": true,
+                        "timeZone": "Australia/Melbourne"
+                    },
+                    "created": "2017-10-11T11:11:45.825+0000",
+                    "items": [
+                        {
+                            "field": "Workflow",
+                            "fieldtype": "jira",
+                            "from": "12871572",
+                            "fromString": "classic default workflow",
+                            "to": "13406802",
+                            "toString": "patch-available, re-open possible"
+                        }
+                    ]
+                }
+            ]
+        },
+        "comment": {
+            "self": "https://jira.test-example.ru/jira/rest/api/2/issue/26313/comment/31023",
+            "id": "31023",
+            "author": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                "avatarUrls": {
+                    "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                    "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                    "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                    "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                },
+                "displayName": "correct_user",
+                "active": true,
+                "timeZone": "Europe/Moscow"
+            },
+            "body": "111",
+            "updateAuthor": {
+                "self": "https://jira.test-example.ru/jira/rest/api/2/user?username=correct_user",
+                "avatarUrls": {
+                    "48x48": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=48",
+                    "24x24": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=24",
+                    "16x16": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=16",
+                    "32x32": "https://secure.gravatar.com/avatar/bf49e7a02172919ca56c9c10cedd2c56?d=mm&s=32"
+                },
+                "displayName": "correct_user",
+                "active": true,
+                "timeZone": "Europe/Moscow"
+            },
+            "created": "2017-11-29T19:37:19.584+0300",
+            "updated": "2017-11-29T19:37:19.584+0300"
+        }
+    },
+    "changelog": {
+        "id": "166629",
+        "items": [
+            {
+                "field": "Start date",
+                "fieldtype": "custom",
+                "from": "2018-03-30",
+                "fromString": "30/Mar/18",
+                "to": "2018-03-19",
+                "toString": "19/Mar/18"
+            },
+            {
+                "field": "End date",
+                "fieldtype": "custom",
+                "from": "2018-04-13",
+                "fromString": "13/Apr/18",
+                "to": "2018-04-02",
+                "toString": "2/Apr/18"
+            }
+        ]
+    }
+}

@@ -1,0 +1,71 @@
+# Copyright (c) 2020 Tulir Asokan
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+from typing import ClassVar
+from abc import ABC, abstractmethod
+
+from mautrix.types import EventType, StateEvent, Membership, Event
+
+from .syncer import InternalEventType, Syncer
+
+
+class Dispatcher(ABC):
+    client: Syncer
+
+    def __init__(self, client: Syncer) -> None:
+        self.client = client
+
+    @abstractmethod
+    def register(self) -> None: ...
+
+    @abstractmethod
+    def unregister(self) -> None: ...
+
+
+class SimpleDispatcher(Dispatcher, ABC):
+    event_type: ClassVar[EventType]
+
+    def register(self) -> None:
+        self.client.add_event_handler(self.event_type, self.handle)
+
+    def unregister(self) -> None:
+        self.client.remove_event_handler(self.event_type, self.handle)
+
+    @abstractmethod
+    async def handle(self, evt: Event) -> None: ...
+
+
+class MembershipEventDispatcher(SimpleDispatcher):
+    event_type = EventType.ROOM_MEMBER
+
+    async def handle(self, evt: StateEvent) -> None:
+        if evt.type != EventType.ROOM_MEMBER:
+            return
+
+        if evt.content.membership == Membership.JOIN:
+            if evt.prev_content.membership != Membership.JOIN:
+                change_type = InternalEventType.JOIN
+            else:
+                change_type = InternalEventType.PROFILE_CHANGE
+        elif evt.content.membership == Membership.INVITE:
+            change_type = InternalEventType.INVITE
+        elif evt.content.membership == Membership.LEAVE:
+            if evt.prev_content.membership == Membership.BAN:
+                change_type = InternalEventType.UNBAN
+            elif evt.prev_content.membership == Membership.INVITE:
+                if evt.state_key == evt.sender:
+                    change_type = InternalEventType.REJECT_INVITE
+                else:
+                    change_type = InternalEventType.DISINVITE
+            elif evt.state_key == evt.sender:
+                change_type = InternalEventType.LEAVE
+            else:
+                change_type = InternalEventType.KICK
+        elif evt.content.membership == Membership.BAN:
+            change_type = InternalEventType.BAN
+        else:
+            return
+
+        self.client.dispatch_manual_event(change_type, evt)

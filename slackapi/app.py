@@ -1,23 +1,24 @@
 import os
+# Import WebClient from Python SDK (github.com/slackapi/python-slack-sdk) // https://api.slack.com/apps/A01U0HAUGH3/oauth?success=1
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
-from slackclient import SlackClient
-SLACK_TOKEN = os.environ.get('SLACK_TOKEN') # Take from .env file
+# WebClient insantiates a client that can call API methods
+# When using Bolt, you can use either `app.client` or the `client` passed to listeners.
+client = WebClient(token=os.environ.get("xoxb-585712992336-1987039158690-eWFQBbJpXGEL4fmAIwuEkmGp"))
+channel_name = "_everyone"
+conversation_id = None
+try:
+    # Call the conversations.list method using the WebClient
+    for response in result client.conversations_list():
+        if conversation_id is not None:
+            break
+        for channel in result["channels"]:
+            if channel["name"] == channel_name:
+                conversation_id = channel["id"]
+                #Print result
+                print(f"Found conversation ID: {conversation_id}")
+                break
 
-slack_client = SlackClient(SLACK_TOKEN)
-
-# Retrieve a list of channels
-def list_channels(): # create the function
-    channels_call = slack_client.api_call("channels.list")
-    if channels_call.get('ok'): # if result is true
-        return channels_call['channels']
-    return None # ifel
-
-# Main Function
-if __name__ == '__main__':
-    channels = list_channels()
-    if channels:
-        print("Channels: ")
-        for c in channels:
-            print(c['name'] + " (" + c['id'] + ")")
-    else:
-        print("Unable to authenticate.")
+except SlackApiError as e:
+    print(f"Error: {e}")

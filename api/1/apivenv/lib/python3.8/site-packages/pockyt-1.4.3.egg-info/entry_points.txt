@@ -1,0 +1,3 @@
+[console_scripts]
+pockyt = pockyt.pockyt:main
+

@@ -1,0 +1,1 @@
+{"name": "unpaddedbase64", "metadata_version": "2.0", "generator": "bdist_wheel (0.24.0)", "summary": "Unpadded Base64", "version": "1.1.0", "extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}}}, "keywords": ["base64"]}

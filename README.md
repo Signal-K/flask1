@@ -3,6 +3,9 @@
 * [APIs](#api) -> Also check out the [datascience stuff](https://github.com/signal-k/flask1/issues/8)
 * [Simple Python API Stuff](#api1)
 
+*Quick note
+"External" folder of this repo refers to our submodules of other repos, OR projects/repos that will soon be moved to other branches/repos. They'll remain on this readme and on the soon-to-be created "Guide"/site map (which is located at [compass](http://ar.skinetics.tech/stellarios/compass) and will be redesigned soon.).
+
 # flask1
 Flask web app testing - with user authentication and front end posting
 

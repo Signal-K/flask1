@@ -1,7 +1,8 @@
-# Can also run this off the Python prompt. Referring to file main.py
 import requests
 
 BASE = "http://127.0.0.1:5000/"
 
-response = requests.get(BASE + "HelloWorld/liam")
+response = requests.patch(BASE + "video/2", {})
 print(response.json())
+
+# Up to https://youtu.be/GMppyAPbLYk?t=3968

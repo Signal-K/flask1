@@ -14,7 +14,7 @@ class VideoModel(db.model):
     views = db.Column(db.Integer, nullable=False)
     likes = db.Column(db.Integer, nullable=False)
 
-    def __repr__(self):
+    def __repr__(self): 
         return f"Video(name={name}, views={views}, likes={likes})"
 
 db.create_all() # Create a database with the VideoModel Model - delete after running this
